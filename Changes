@@ -1,5 +1,6 @@
 Revision history for Dist::Zilla::Plugin::Test::ReportMetadata
 
+0.2.0     2015-07-16 13:28:21
           - Renamed to ReportMetadata
           - Added project files to master branch
 

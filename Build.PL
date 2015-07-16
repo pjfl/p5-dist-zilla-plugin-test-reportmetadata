@@ -19,6 +19,7 @@ my $prereqs  = {
     'Data::Section' => '0.200006',
     'Dist::Zilla' => '5.037',
     'Moose' => '2.1405',
+    'MooseX::Role::Parameterized' => '1.08',
     'Sub::Exporter::ForMethods' => '0.100051',
     'perl' => '5.008',
     'version' => '0.88'
