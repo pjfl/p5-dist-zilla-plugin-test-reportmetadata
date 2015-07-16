@@ -1,5 +1,5 @@
-Revision history for Dist::Zilla::Plugin::Test::ReportPrereqsMB
+Revision history for Dist::Zilla::Plugin::Test::ReportMetadata
 
-0.1.1     2015-07-02 02:17:12
+          - Renamed to ReportMetadata
           - Added project files to master branch
 

@@ -35,7 +35,7 @@
 \b_build
 
 # Avoid Dist::Zilla config file
-\bdist.ini$
+^dist.ini
 
 # Avoid Devel::Cover generated files
 \bcover_db
@@ -61,4 +61,4 @@ Thumbs.db
 \bipc_srlock
 
 # Avoid archives of this distribution
-\bDist-Zilla-Plugin-Test-ReportPrereqsMB-v?[\d\.\_]+
+\bDist-Zilla-Plugin-Test-ReportMetadata-v?[\d\.\_]+
