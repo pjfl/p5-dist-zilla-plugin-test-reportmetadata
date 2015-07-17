@@ -20,7 +20,9 @@ BEGIN {
    $perl_ver = $notes->{min_perl_version} || 5.008;
 
    if ($notes->{testing}) {
-      $Bin =~ m{ : .+ : }mx and plan skip_all => 'Two colons in $Bin path';
+      $Bin =~ m{ : .+ : }mx    and plan skip_all => 'Two colons in $Bin path';
+      $host eq 'vm-debian-001' and plan skip_all =>
+         'Broken smoker 04fd9956-2ca5-11e5-8be5-d039436f2841';
    }
 }
 
