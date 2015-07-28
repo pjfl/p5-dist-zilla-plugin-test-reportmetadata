@@ -1,5 +1,6 @@
 Revision history for Dist::Zilla::Plugin::Test::ReportMetadata
 
+          - Upstream toolchain update
           - Added broken smoker to exception list
 
 0.2.0     2015-07-16 13:28:21
