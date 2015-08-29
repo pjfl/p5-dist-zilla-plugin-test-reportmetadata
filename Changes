@@ -1,5 +1,6 @@
 Revision history for Dist::Zilla::Plugin::Test::ReportMetadata
 
+          - Better prereq data for build and test phases
           - Upstream toolchain update
           - Added broken smoker to exception list
 
