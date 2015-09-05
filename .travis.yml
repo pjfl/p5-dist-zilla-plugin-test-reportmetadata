@@ -10,9 +10,7 @@ branches:
 env:
   global:
     - AUTHOR_TESTING=0
-    - AUTOMATED_TESTING=1
 before_install:
   - cpanm -n Devel::Cover
-  - eval $(curl https://travis-perl.github.io/init) --auto
 script:
   perl Build.PL && ./Build && ./Build testcover
