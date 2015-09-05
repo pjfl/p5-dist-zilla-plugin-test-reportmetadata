@@ -1,4 +1,18 @@
+---
+sudo: false
 language: perl
+perl:
+  - '5.22'
+  - '5.10'
 branches:
   only:
     - master
+matrix:
+  include:
+    - env: COVERAGE=1
+      perl: '5.22'
+env:
+  global:
+    - AUTOMATED_TESTING=1
+before_install:
+  - eval $(curl https://travis-perl.github.io/init) --auto
