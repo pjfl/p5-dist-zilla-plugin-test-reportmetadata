@@ -1,5 +1,6 @@
 Revision history for Dist::Zilla::Plugin::Test::ReportMetadata
 
+          - Added coverage statistics to Travis output
           - Trying Travis CI containers
           - Upstream toolchain update
           - Better prereq data for build and test phases
