@@ -1,5 +1,6 @@
 Revision history for Dist::Zilla::Plugin::Test::ReportMetadata
 
+          - Get Travis to install Devel::Cover
           - Added coverage statistics to Travis output
           - Trying Travis CI containers
           - Upstream toolchain update
