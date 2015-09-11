@@ -1,6 +1,6 @@
 Revision history for Dist::Zilla::Plugin::Test::ReportMetadata
 
-0.3.0     2015-09-11 13:28:37
+
           - Try without Travis helpers
           - Get Travis to install Devel::Cover
           - Added coverage statistics to Travis output

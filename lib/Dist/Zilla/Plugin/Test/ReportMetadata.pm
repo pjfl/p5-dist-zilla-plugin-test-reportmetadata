@@ -1,7 +1,7 @@
 package Dist::Zilla::Plugin::Test::ReportMetadata;
 
 use 5.008;
-use version; our $VERSION = qv( sprintf '0.2.%d', q$Rev: 0 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.3.%d', q$Rev: 0 $ =~ /\d+/gmx );
 
 use Data::Dumper;
 use Dist::Zilla 4 ();
