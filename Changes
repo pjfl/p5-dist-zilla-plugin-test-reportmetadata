@@ -1,5 +1,8 @@
 Revision history for Dist::Zilla::Plugin::Test::ReportMetadata
 
+          - Fewer test dependencies in boilerplate
+          - Smarter changelog parsing in git hook
+
 0.3.0     2015-09-11 13:28:37
           - Try without Travis helpers
           - Get Travis to install Devel::Cover
