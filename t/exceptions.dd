@@ -1,0 +1,5 @@
+do { my $x = {
+       'cpantest.antelope.net' => '28580308-8a62-11e5-bac6-d11fe29420dd'
+     };
+  $x;
+ }
