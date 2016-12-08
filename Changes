@@ -1,5 +1,6 @@
 Revision history for Dist::Zilla::Plugin::Test::ReportMetadata
 
+0.5.1     2016-12-08 19:00:05
           - Toolchain update
 
 0.4.1     2015-10-01 15:54:53
