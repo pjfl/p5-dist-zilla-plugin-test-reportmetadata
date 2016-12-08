@@ -1,5 +1,7 @@
 Revision history for Dist::Zilla::Plugin::Test::ReportMetadata
 
+          - Toolchain update
+
 0.4.1     2015-10-01 15:54:53
           - Fewer test dependencies in boilerplate
           - Smarter changelog parsing in git hook

@@ -1,10 +1,11 @@
 package Dist::Zilla::Plugin::Test::ReportMetadata;
 
 use 5.008;
-use version; our $VERSION = qv( sprintf '0.4.%d', q$Rev: 2 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.4.%d', q$Rev: 3 $ =~ /\d+/gmx );
 
 use Data::Dumper;
 use Dist::Zilla 4 ();
+use File::Spec;
 use Moose;
 use Sub::Exporter::ForMethods;
 
@@ -29,7 +30,7 @@ has 'includes' => is => 'ro', traits => [ 'Array' ], default => sub { [] },
 has 'verify_prereqs' => is => 'ro', isa => 'Bool', default => 1;
 
 sub _dump_filename {
-   return 't/00report-metadata.dd';
+   return File::Spec->catfile( 't', '00report-metadata.dd' );
 }
 
 sub _dump_prereqs {
@@ -225,7 +226,7 @@ Peter Flanigan, C<< <pjfl@cpan.org> >>
 
 =head1 License and Copyright
 
-Copyright (c) 2015 Peter Flanigan. All rights reserved
+Copyright (c) 2016 Peter Flanigan. All rights reserved
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself. See L<perlartistic>
@@ -284,7 +285,7 @@ my $LAX_VERSION_RE    = # From $version::LAX
        )}x;
 my $OSNAME            = lc $^O;
 # Add static prereqs to the included modules list
-my $STATIC_PREREQS    = do 'INSERT_DD_FILENAME_HERE';
+my $STATIC_PREREQS    = do './INSERT_DD_FILENAME_HERE';
 
 my $diag_env = sub {
    my $k = shift; my $v = exists $ENV{ $k } ? $ENV{ $k } : 'undef';

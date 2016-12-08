@@ -2,7 +2,7 @@ package t::boilerplate;
 
 use strict;
 use warnings;
-use File::Spec::Functions qw( catdir updir );
+use File::Spec::Functions qw( catdir catfile updir );
 use FindBin               qw( $Bin );
 use lib               catdir( $Bin, updir, 'lib' ), catdir( $Bin, 'lib' );
 
@@ -26,13 +26,23 @@ BEGIN {
    $Bin =~ m{ : .+ : }mx and plan skip_all => 'Two colons in $Bin path';
 
    if ($notes->{testing}) {
-      $host eq 'vm-debian-001' and plan skip_all =>
-         'Broken smoker 04fd9956-2ca5-11e5-8be5-d039436f2841';
+      my $dumped = catfile( 't', 'exceptions.dd' );
+      my $except = {}; -f $dumped and $except = do $dumped;
+
+      exists $except->{ $host } and plan skip_all =>
+         'Broken smoker '.$except->{ $host };
+
+      for my $key (keys %{ $except }) {
+         $host =~ m{ $key \z }mx and plan skip_all =>
+            'Broken smoker '.$except->{ $key };
+      }
    }
 }
 
 use Test::Requires "${perl_ver}";
 use Test::Requires { version => 0.88 };
+
+use version; our $VERSION = qv( '0.3' );
 
 sub import {
    strict->import;
