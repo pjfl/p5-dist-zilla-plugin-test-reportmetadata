@@ -1,5 +1,5 @@
 requires "Data::Section" => "0.200006";
-requires "Dist::Zilla" => "5.037";
+requires "Dist::Zilla" => "5.031";
 requires "Moose" => "2.1405";
 requires "MooseX::Role::Parameterized" => "1.08";
 requires "Sub::Exporter::ForMethods" => "0.100051";

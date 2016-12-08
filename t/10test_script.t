@@ -33,7 +33,7 @@ sub capture_test_results {
 
    ok $tzil, 'Created test dist'; $tzil->build_in;
 
-   {  my $wd = pushd( $tzil->tempdir->subdir( 'build' ) );
+   {  my $wd = pushd( File::Spec->catdir( $tzil->tempdir, 'build' ) );
       capture { system( $^X, 'Build.PL' ) }; # create MYMETA.json
    }
 
